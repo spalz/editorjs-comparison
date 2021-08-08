@@ -1,4 +1,4 @@
-.cdxcarousel-addImage {
+.cdxcarousel-comparison-addImage {
     height: 225px;
     display: flex;
     justify-content: center;
@@ -9,11 +9,11 @@
     margin-top: 5px;
 }
 
-.cdxcarousel-item--empty .image-tool__image-preloader{
+.cdxcarousel-comparison-item--empty .image-tool__image-preloader{
   display: none;
 }
 
-.cdxcarousel-item img {
+.cdxcarousel-comparison-item img {
     margin-bottom: 15px;
     display: block;
     object-fit: cover;
@@ -22,21 +22,21 @@
     order: 1;
 }
 
-.cdxcarousel-inputUrl {
+.cdxcarousel-comparison-inputUrl {
     order: 0;
     display: none;
 }
 
-.cdxcarousel-caption {
+.cdxcarousel-comparison-caption {
     order: 3;
 }
 
 
-.cdxcarousel-block {
+.cdxcarousel-comparison-block {
     width: 50%;
 }
 
-.cdxcarousel-list {
+.cdxcarousel-comparison-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -44,12 +44,12 @@
     align-items: flex-start;
 }
 
-.cdxcarousel-wrapper {
+.cdxcarousel-comparison-wrapper {
     margin-top: 10px;
     margin-bottom: 15px;
 }
 
-.cdxcarousel-item {
+.cdxcarousel-comparison-item {
     height: 235px;
     padding: 5px;
     display: flex;
@@ -58,7 +58,7 @@
 }
 
 
-.cdxcarousel-removeBtn {
+.cdxcarousel-comparison-removeBtn {
     position: absolute;
     padding: 3px;
     right: 10px;
@@ -78,12 +78,11 @@
     transition: background 200ms;
 }
 
-.cdxcarousel-removeBtn:hover {
+.cdxcarousel-comparison-removeBtn:hover {
     background: #eff2f5;
 }
 
 .image-tool {
-
   &__image {
     border-radius: 3px;
     overflow: hidden;

@@ -48,14 +48,14 @@ export default class Comparison {
       /**
        * Tool's classes
        */
-      wrapper: 'cdxcarousel-wrapper',
-      addButton: 'cdxcarousel-addImage',
-      block: 'cdxcarousel-block',
-      item: 'cdxcarousel-item',
-      removeBtn: 'cdxcarousel-removeBtn',
-      inputUrl: 'cdxcarousel-inputUrl',
-      caption: 'cdxcarousel-caption',
-      list: 'cdxcarousel-list',
+      wrapper: 'cdxcarousel-comparison-wrapper',
+      addButton: 'cdxcarousel-comparison-addImage',
+      block: 'cdxcarousel-comparison-block',
+      item: 'cdxcarousel-comparison-item',
+      removeBtn: 'cdxcarousel-comparison-removeBtn',
+      inputUrl: 'cdxcarousel-comparison-inputUrl',
+      caption: 'cdxcarousel-comparison-caption',
+      list: 'cdxcarousel-comparison-list',
       imagePreloader: 'image-tool__image-preloader'
     };
   };
@@ -216,7 +216,7 @@ export default class Comparison {
       this._createImage(response.file.url, this.list.childNodes[this.list.childNodes.length - 2].firstChild, '', this.list.childNodes[this.list.childNodes.length - 2].firstChild.childNodes[1]);
       this.list.childNodes[this.list.childNodes.length - 2].firstChild.childNodes[2].style.backgroundImage = '';
       this.list.childNodes[this.list.childNodes.length - 2].firstChild.firstChild.value = response.file.url;
-      this.list.childNodes[this.list.childNodes.length - 2].firstChild.classList.add('cdxcarousel-item--empty');
+      this.list.childNodes[this.list.childNodes.length - 2].firstChild.classList.add('cdxcarousel-comparison-item--empty');
     } else {
       this.uploadingFailed('incorrect response: ' + JSON.stringify(response));
     }
@@ -229,10 +229,10 @@ export default class Comparison {
    * @param {string} errorText
    */
   uploadingFailed(errorText) {
-    console.log('Gallery : uploading failed because of', errorText);
+    console.log('Сравнение: загрузка не удалась из-за', errorText);
 
     this.api.notifier.show({
-      message: this.api.i18n.t('Can not upload an image, try another'),
+      message: this.api.i18n.t('Не получается загрузить изображение, попробуйте другое'),
       style: 'error'
     });
   }
@@ -268,7 +268,7 @@ export default class Comparison {
     const addButton = make('div', [this.CSS.button, this.CSS.addButton]);
     const block = make('div', [ this.CSS.block ]);
 
-    addButton.innerHTML = `${buttonIcon} Add Image`;
+    addButton.innerHTML = `${buttonIcon} Изображение для сравнения`;
     addButton.addEventListener('click', () => {
       this.onSelectFile();
     });
